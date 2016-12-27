@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CBAD0AA1E11037C0085585D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBAD0A91E11037C0085585D /* Foundation.framework */; };
+		2CBAD0B41E11037C0085585D /* AlipayARRedEnvelope.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAD0B31E11037C0085585D /* AlipayARRedEnvelope.mm */; };
+		2CBAD0BF1E110AD50085585D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBAD0BE1E110AD50085585D /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CBAD0A61E11037C0085585D /* AlipayARRedEnvelope.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = AlipayARRedEnvelope.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBAD0A91E11037C0085585D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2CBAD0AE1E11037C0085585D /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		2CBAD0AF1E11037C0085585D /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		2CBAD0B11E11037C0085585D /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		2CBAD0B21E11037C0085585D /* AlipayARRedEnvelope-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlipayARRedEnvelope-Prefix.pch"; sourceTree = "<group>"; };
+		2CBAD0B31E11037C0085585D /* AlipayARRedEnvelope.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AlipayARRedEnvelope.mm; sourceTree = "<group>"; };
+		2CBAD0B81E11037C0085585D /* AlipayARRedEnvelope.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = AlipayARRedEnvelope.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/AlipayARRedEnvelope.plist; sourceTree = "<group>"; };
+		2CBAD0BE1E110AD50085585D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CBAD0A21E11037C0085585D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBAD0BF1E110AD50085585D /* UIKit.framework in Frameworks */,
+				2CBAD0AA1E11037C0085585D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CBAD09C1E11037C0085585D = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0AB1E11037C0085585D /* AlipayARRedEnvelope */,
+				2CBAD0A81E11037C0085585D /* Frameworks */,
+				2CBAD0A71E11037C0085585D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CBAD0A71E11037C0085585D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0A61E11037C0085585D /* AlipayARRedEnvelope.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CBAD0A81E11037C0085585D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0BE1E110AD50085585D /* UIKit.framework */,
+				2CBAD0A91E11037C0085585D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CBAD0AB1E11037C0085585D /* AlipayARRedEnvelope */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0B31E11037C0085585D /* AlipayARRedEnvelope.mm */,
+				2CBAD0AC1E11037C0085585D /* Package */,
+				2CBAD0B01E11037C0085585D /* Supporting Files */,
+			);
+			path = AlipayARRedEnvelope;
+			sourceTree = "<group>";
+		};
+		2CBAD0AC1E11037C0085585D /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0AD1E11037C0085585D /* DEBIAN */,
+				2CBAD0B51E11037C0085585D /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		2CBAD0AD1E11037C0085585D /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0AE1E11037C0085585D /* control.txt */,
+				2CBAD0AF1E11037C0085585D /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		2CBAD0B01E11037C0085585D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0B11E11037C0085585D /* PackageVersion.plist */,
+				2CBAD0B21E11037C0085585D /* AlipayARRedEnvelope-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CBAD0B51E11037C0085585D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0B61E11037C0085585D /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		2CBAD0B61E11037C0085585D /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0B71E11037C0085585D /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		2CBAD0B71E11037C0085585D /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				2CBAD0B81E11037C0085585D /* AlipayARRedEnvelope.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2CBAD0A31E11037C0085585D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2CBAD0A51E11037C0085585D /* AlipayARRedEnvelope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CBAD0BB1E11037C0085585D /* Build configuration list for PBXNativeTarget "AlipayARRedEnvelope" */;
+			buildPhases = (
+				2CBAD0A11E11037C0085585D /* Sources */,
+				2CBAD0A21E11037C0085585D /* Frameworks */,
+				2CBAD0A31E11037C0085585D /* Headers */,
+				2CBAD0A41E11037C0085585D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlipayARRedEnvelope;
+			productName = AlipayARRedEnvelope;
+			productReference = 2CBAD0A61E11037C0085585D /* AlipayARRedEnvelope.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CBAD09D1E11037C0085585D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				TargetAttributes = {
+					2CBAD0A51E11037C0085585D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 2CBAD0A01E11037C0085585D /* Build configuration list for PBXProject "AlipayARRedEnvelope" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2CBAD09C1E11037C0085585D;
+			productRefGroup = 2CBAD0A71E11037C0085585D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CBAD0A51E11037C0085585D /* AlipayARRedEnvelope */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CBAD0A41E11037C0085585D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CBAD0A11E11037C0085585D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBAD0B41E11037C0085585D /* AlipayARRedEnvelope.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2CBAD0B91E11037C0085585D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		2CBAD0BA1E11037C0085585D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		2CBAD0BC1E11037C0085585D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AlipayARRedEnvelope/AlipayARRedEnvelope-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		2CBAD0BD1E11037C0085585D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AlipayARRedEnvelope/AlipayARRedEnvelope-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CBAD0A01E11037C0085585D /* Build configuration list for PBXProject "AlipayARRedEnvelope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBAD0B91E11037C0085585D /* Debug */,
+				2CBAD0BA1E11037C0085585D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CBAD0BB1E11037C0085585D /* Build configuration list for PBXNativeTarget "AlipayARRedEnvelope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CBAD0BC1E11037C0085585D /* Debug */,
+				2CBAD0BD1E11037C0085585D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CBAD09D1E11037C0085585D /* Project object */;
+}
