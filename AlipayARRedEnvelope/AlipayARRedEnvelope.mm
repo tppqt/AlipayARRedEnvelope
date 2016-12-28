@@ -25,9 +25,6 @@
 #include <notify.h>
 #import  "CaptainHook/CaptainHook.h"
 
-//AR 地图页面
-@class AREMapViewController;
-
 static id envelopModel;
 
 //AR 红包扫描控制器
