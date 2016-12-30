@@ -20,11 +20,15 @@
 // THE SOFTWARE.
 
 #import  <Foundation/Foundation.h>
-#import  <UIKit/UIKit.h>
 #import  <CoreLocation/CoreLocation.h>
+#import  <UIKit/UIKit.h>
 #include <notify.h>
 #import  "CaptainHook/CaptainHook.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+//红包数据模型
 static id envelopModel;
 
 //AR 红包扫描控制器
@@ -34,8 +38,6 @@ CHDeclareClass(ARERealityViewController);
 
 //显示菜单
 CHOptimizedMethod(0, self, void, ARERealityViewController, showPopMenu) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"标记选项"
                                                         message:@"1: 建议领取时间间隔为1-3分钟 ~_^ \n 2: 每日领取个数上限为10 ᶘ ᵒᴥᵒᶅ \n 3: 请关注公众号'iOS安全小贴士' ( ̀⌄ ́)"
                                                        delegate:self
@@ -50,9 +52,9 @@ CHDeclareMethod2(void, ARERealityViewController, alertView, UIAlertView *, alert
     if (alertView.tag == 101) {
         if (buttonIndex == 1) {
             envelopModel = [((id(*)(id, SEL))objc_msgSend)(alertView.delegate, sel_registerName("envelopModel")) retain];
+            NSString *creatorAlipayAccount = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("creatorAlipayAccount"));
             
-            if (envelopModel) {
-                NSString *creatorAlipayAccount = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("creatorAlipayAccount"));
+            if (creatorAlipayAccount) {
                 NSString *creatorUserName = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("creatorUserName"));
                 CLLocation *userLocation = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("userLocation"));
                 
@@ -63,7 +65,7 @@ CHDeclareMethod2(void, ARERealityViewController, alertView, UIAlertView *, alert
                                   otherButtonTitles:nil] show];
             } else {
                 [[[UIAlertView alloc] initWithTitle:@"警告"
-                                            message:@"没有获取到红包数据，请返回重试"
+                                            message:@"没有获取到红包数据，请等待数据加载或者返回重试"
                                            delegate:nil
                                   cancelButtonTitle:@"知道了"
                                   otherButtonTitles:nil] show];
@@ -79,7 +81,7 @@ CHDeclareMethod2(void, ARERealityViewController, alertView, UIAlertView *, alert
 }
 
 //视图加载完毕
-CHOptimizedMethod(0, self, void, ARERealityViewController, viewDidLoad) {
+CHOptimizedMethod(0, self, void, ARERealityViewController, updateEnvelopeElements) {
     if (envelopModel) {
         NSString *creatorAlipayAccount = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("creatorAlipayAccount"));
         NSString *creatorUserName = ((id(*)(id, SEL))objc_msgSend)(envelopModel, sel_registerName("creatorUserName"));
@@ -94,24 +96,17 @@ CHOptimizedMethod(0, self, void, ARERealityViewController, viewDidLoad) {
         [alertView show];
     }
     
-    CHSuper(0, ARERealityViewController, viewDidLoad);
+    CHSuper(0, ARERealityViewController, updateEnvelopeElements);
 }
 
-//发现红包
-CHOptimizedMethod(0, self, void, ARERealityViewController, envelopeDidFound) {
-    envelopModel = nil;
-    
-    CHSuper(0, ARERealityViewController, envelopeDidFound);
-}
 #pragma clang diagnostic pop
 
 //入口设置
 CHConstructor {
-	@autoreleasepool {
-        //方法注册
+    @autoreleasepool {
+        //ARERealityViewController 方法注册
         CHLoadLateClass(ARERealityViewController);
-		CHHook(0, ARERealityViewController, showPopMenu);
-        CHHook(0, ARERealityViewController, viewDidLoad);
-        CHHook(0, ARERealityViewController, envelopeDidFound);
-	}
+        CHHook0(ARERealityViewController, showPopMenu);
+        CHHook0(ARERealityViewController, updateEnvelopeElements);
+    }
 }
